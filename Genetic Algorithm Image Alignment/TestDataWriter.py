@@ -99,23 +99,11 @@ def writeTestData(parameters,scan_path = r"Scans\testData2\PN",state_var = ['p',
 
 if __name__ == "__main__":
     samp_id=[str(i+1) for i in range(4)]
-    bi=[0,0.03,0.02,0.02]
-    bj=[0,0.02,0.01,0.02]
+    bias_i=[0,0.03,0.02,0.02]
+    bias_j=[0,0.02,0.01,0.02]
     gamma=[1.03,1.01,1.01,1]
     theta=[0,-0.0349066,0.0174533,0.0349066]
-    for parameter in list(zip(samp_id, bi, bj, gamma ,theta)):
+    for parameter in list(zip(samp_id, bias_i, bias_j, gamma ,theta)):
         writeTestData(parameter)
     
-    'mean maxmimum score'  
-    # x = np.linspace(0, 1, 600)
-    # y = np.linspace(0, 1, 600)
-    # x, y = np.meshgrid(x, y)
-    # score=[]
-    # for _ in range(50):
-    #     ref=noise(f(x,y))
-    #     dref=noise(post(x, y,bi=0,bj=0,gamma=1,theta=0))
-    #     score.append(-np.average((np.subtract(dref,ref))**2)-4*np.var(50*np.subtract(dref,ref)))
-    # print(np.average(score))
-    # X, Y = np.meshgrid(x, y)
-    # Z0 = f(X, Y)
 

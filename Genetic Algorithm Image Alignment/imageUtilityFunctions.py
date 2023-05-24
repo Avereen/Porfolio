@@ -473,7 +473,7 @@ def plot_2curfall2(ims,color_map=cm.gray):
     # crop 
     
     dmean, dspan_diff = (dmax + dmin)/2 ,(dmax_diff - dmin_diff)/2
-    dmax, dmin = min([dmean + 2*dspan_diff,0.5]), 0#max([dmean - 2*dspan_diff,0])
+    dmax, dmin = min([dmean + 2*dspan_diff,10]), 0#max([dmean - 2*dspan_diff,0])
     dmin_diff=0
     print(dmax,dmin)
     tspan=(round(dmin,1),round(dmax,1))
