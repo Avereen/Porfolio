@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 from scipy.fftpack import fft
 
 import numpy as np
-import KF_measurement_gating as kf
+import KF_gate_class as kf
 mat = lambda arr : np.atleast_2d(arr)
 beam_length= 0.3525
 
