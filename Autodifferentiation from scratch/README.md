@@ -1,1 +1,1 @@
-ll
+This implementation of auto differentiation was done for coursework; however, it uses no additional libraries other than NumPy for matrix multiplication. This implementation was used on two different problems in machine learning for multi-class classification and regression implementations. Well, unoptimized, the method works well for linear models with all standard activation functions implemented, such as tanh, logistic, ReLu, SoftPlus, etc. The implementation also has a base Python implementation of backpropagation and learning.

@@ -86,7 +86,7 @@ def tanh(x):
     grad = ((x, 1-np.tanh(x.value)**2), )
     return Dual(value, grad)
 
-act_sig = np.vectorize(lambda dual : sigmoid(dual))
+act_tanh = np.vectorize(lambda dual : tanh(dual))
     
 def sigmoid(x):
     #sigm = lambda x : 1/(1+np.exp(-x))
@@ -94,7 +94,7 @@ def sigmoid(x):
     grad = ((x,value*(1-value)), )
     return Dual(value, grad)
 
-act_tanh = np.vectorize(lambda dual : tanh(dual))
+act_sig = np.vectorize(lambda dual : sigmoid(dual))
 
 # Binary threshold function 
 def thresh(x,thresh=.5):
